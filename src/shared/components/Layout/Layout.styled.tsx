@@ -1,21 +1,8 @@
-import { Box, styled } from '@mui/material';
+import { styled } from '@mui/material';
 
-export const LayoutContainer = styled(Box)`
+export const LayoutContainer = styled('div')`
   display: flex;
   height: 100vh;
   width: 100vw;
+  background-color: #F8F5F1;
 `;
-
-export const HeaderAndContentContainer = styled(Box)(
-  ({ theme }) => `
-  width: calc(100% - ${theme.variables.sidebarWidth});
-  overflow: scroll;
-  margin-left: auto;
-  padding:${theme.spacing(2)} ${theme.spacing(4)};
-`
-);
-export const ContentContainer = styled(Box)(
-  ({ theme }) => `
-  height: calc(100% - ${theme.variables.headerHeight});
-`
-);
