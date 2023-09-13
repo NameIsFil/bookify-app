@@ -1,20 +1,16 @@
-import { Sidebar } from './Sidebar';
-import { FC, PropsWithChildren } from 'react';
+import { FC, PropsWithChildren} from 'react';
 import {
-  ContentContainer,
-  HeaderAndContentContainer,
-  LayoutContainer,
+    LayoutContainer,
 } from './Layout.styled';
-import { Header } from './Header';
+import {Navbar} from "./Navbar";
 
-export const Layout: FC<PropsWithChildren> = ({ children }) => {
+
+
+export const Layout: FC<PropsWithChildren> = (props) => {
   return (
     <LayoutContainer>
-      <Sidebar />
-      <HeaderAndContentContainer>
-        <Header />
-        <ContentContainer>{children}</ContentContainer>
-      </HeaderAndContentContainer>
+        <Navbar />
+        {props.children}
     </LayoutContainer>
   );
 };

@@ -1,4 +1,4 @@
-import { FC, ReactElement, SVGProps } from 'react';
+import { ReactElement } from 'react';
 import { RoutesEnum } from './Routes.enum';
 
 export interface Route {
@@ -6,6 +6,5 @@ export interface Route {
   name?: string;
   Component: ReactElement;
   isPublic?: boolean;
-  Icon: FC<SVGProps<SVGSVGElement> & { title?: string | undefined }> | null;
   isAlignedToBottom?: boolean;
 }

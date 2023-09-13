@@ -294,6 +294,13 @@ export const createReactExampleTheme = () => {
           fontFamily: `"Poppins", sans-serif`,
         },
       },
+      MuiOutlinedInput: {
+        styleOverrides: {
+          root: {
+            borderRadius: '50px',
+          },
+        },
+      },
       MuiMenuItem: {
         styleOverrides: {
           root: {
