@@ -11,15 +11,16 @@ type VenueContainerProps = {
 }
 
 export const VenueContainer: FunctionComponent<VenueContainerProps> = (props) => {
+
     if (props.venueDetails === undefined) {
         return null
     }
 
     return (
-        <StyledVenueContainer>
+        <StyledVenueContainer key={props.venue.id} >
             <p>{props.venue.name}</p>
-            <p>{props.venueDetails.id}</p>
-            <Link to={``}>
+            <p>{props.venue.id}</p>
+            <Link to={`/details/${props.venue.id}`}>
                 <AddIcon sx={{ color: grey[100] }} />
             </Link>
         </StyledVenueContainer>

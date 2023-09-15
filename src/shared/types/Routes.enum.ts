@@ -3,4 +3,5 @@ export enum RoutesEnum {
   Fallback = '/',
   Dashboard = '/dashboard',
   VenuesList = '/venues-list',
+  Details = '/details/:venueId',
 }

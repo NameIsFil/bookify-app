@@ -116,7 +116,7 @@ export const SortNumber = styled('div')`
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
   letter-spacing: 0.48px;
 `;
 
@@ -125,5 +125,5 @@ export const FilterNumber = styled('div')`
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
 `;
