@@ -1,15 +1,8 @@
-import { SearchField } from "../../shared/components/Layout/SearchField";
-import { SearchButton } from "../../shared/components/Layout/SearchButton";
 import { DropDownItem } from "../../shared/components/Layout/DropDownItem";
 import { VenueTable } from "./VenueTable";
+import { FrontPage } from "../../shared/components/Layout/FrontPage";
 import {
     StyledFrontPageContainer,
-    HeadText,
-    SearchBar,
-    TopPart,
-    BottomPart,
-    QuoteText,
-    TopFrontPage,
     BottomFrontPage,
     MainContainer,
     FilterContainer,
@@ -23,26 +16,7 @@ import {
 export const VenuesList = () => {
     return (
         <StyledFrontPageContainer>
-            <TopFrontPage>
-                <TopPart>
-                    <HeadText>
-                        Find your place and experience it together.
-                    </HeadText>
-                </TopPart>
-                <BottomPart>
-                    <SearchBar>
-                        <SearchField name={"location"}/>
-                        <SearchField name={"venue"}/>
-                        <SearchField name={"pdsadlasdsa"}/>
-                        <SearchField name={"location"}/>
-                        <SearchField name={"location"}/>
-                    </SearchBar>
-                    <QuoteText>
-                        I don’t want to be that specific
-                    </QuoteText>
-                    <SearchButton />
-                </BottomPart>
-            </TopFrontPage>
+            <FrontPage />
             <BottomFrontPage>
                 <MainContainer>
                     <FilterContainer>

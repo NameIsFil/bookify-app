@@ -8,6 +8,11 @@ import {
 
 type features = string[]
 
+type Location = {
+    postalCode: string,
+    city: string,
+}
+
 type sleepingDetails = {
     maxCapacity: number,
     amountOfBeds: number,
@@ -99,7 +104,6 @@ export const VenueTable: FunctionComponent = () => {
 
         const venuesListArray = Object.values(venuesListObject);
         setVenuesList(venuesListArray);
-        console.log(venuesListArray)
     }
 
     if(!venuesList) {

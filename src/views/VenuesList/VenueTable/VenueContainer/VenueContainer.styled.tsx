@@ -1,4 +1,4 @@
-import {styled} from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 
 export const StyledVenueContainer = styled('div')`
   width: 282px;
