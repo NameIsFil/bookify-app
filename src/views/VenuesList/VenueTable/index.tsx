@@ -25,6 +25,7 @@ type contactDetails = {
 
 export type Venue = {
     id: string,
+    image: string,
     location: Location,
     pricePerNightInEUR: number,
     rating: number,

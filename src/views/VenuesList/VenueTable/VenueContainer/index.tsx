@@ -17,7 +17,7 @@ export const VenueContainer: FunctionComponent<VenueContainerProps> = (props) =>
     }
 
     return (
-        <StyledVenueContainer key={props.venue.id} >
+        <StyledVenueContainer background={props.venue.albumId} >
             <p>{props.venue.name}</p>
             <p>{props.venue.id}</p>
             <Link to={`/details/${props.venue.id}`}>
