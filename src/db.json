@@ -145,7 +145,7 @@
     },
     {
       "id": "9452c485-ccfc-4a27-b2f6-d74db0ee3111",
-      "image": "https://picsum.photos/id/97/500/800",
+      "image": "https://picsum.photos/id/100/500/800",
       "location": {
         "postalCode": "17-0809",
         "city": "Monahanborough"
@@ -154,7 +154,7 @@
       "rating": 0.7,
       "capacity": 10,
       "name": "Jerde - Adams",
-      "albumId": 97
+      "albumId": 100
     },
     {
       "id": "a92dcb81-ae78-4af0-a12e-82ec72dc95b6",
