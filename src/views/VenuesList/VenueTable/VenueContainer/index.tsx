@@ -8,14 +8,13 @@ import {
     ContainerPrice,
     ContainerPriceInterior,
     ContainerText,
-    LocationText,
     TopBox,
     HeartIcon,
     RatingText,
     BigStarIcon, PeopleIcon,
     RatingSegment,
     LocationContainer,
-    LocationIcon,
+    LocationIcon, LocationTextBot, LocationTextTop,
 } from "./VenueContainer.styled.tsx";
 import { Link } from "react-router-dom";
 import { grey } from "@mui/material/colors";
@@ -46,10 +45,10 @@ export const VenueContainer: FunctionComponent<VenueContainerProps> = (props) =>
                 </TopBox>
                 <ContainerPrice>
                     <ContainerPriceInterior>
-                        <ContainerText>{props.venue.pricePerNightInEUR}zł / doba</ContainerText>
+                        <LocationTextTop>{props.venue.pricePerNightInEUR}zł / doba</LocationTextTop>
                         <LocationContainer>
                             <LocationIcon />
-                            <LocationText> {props.venue.location.city}</LocationText>
+                            <LocationTextBot> {props.venue.location.city}</LocationTextBot>
                         </LocationContainer>
                     </ContainerPriceInterior>
                 </ContainerPrice>

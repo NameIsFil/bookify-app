@@ -14,8 +14,7 @@ export const StyledVenueContainer = styled('div')<InputProps>(({ background }) =
    justify-content: space-between;
    height: 193px;
    width: 282px;
-   background-image: url("https://picsum.photos/id/${background}/282/193");
-   
+   background-image: url("https://picsum.photos/id/${background}/282/193"); 
 `)
 
 export const ContainerIcon = styled('div')`
@@ -33,9 +32,9 @@ export const ContainerIcon = styled('div')`
 `;
 
 export const ContainerTitle = styled('div')`
-  width: 164px;
-  height: 32px;
-  padding: 8px 0px;
+  max-width: 180px;
+  resize: both;
+  padding: 8px 5px;
   display: flex;
   justify-content: center;
   border-radius: 0px 0px 0px 18px;
@@ -44,33 +43,9 @@ export const ContainerTitle = styled('div')`
   background: rgba(0, 0, 0, 0.50);
 `;
 
-export const ContainerPrice = styled('div')`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 140px;
-  height: 70px;
-  flex-shrink: 0;
-  border-radius: 0px 18px 0px 0px;
-  background: rgba(0, 0, 0, 0.60);
-`;
-
-export const LocationContainer = styled('div')`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: left;
-`;
-
-export const ContainerPriceInterior = styled('div')`
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-`;
-
 export const ContainerText = styled('p')`
-  margin: 0;
+  margin: 0 5px;
+  text-align: right;
   color: #FFF;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.60);
   font-family: Poppins;
@@ -81,10 +56,49 @@ export const ContainerText = styled('p')`
   letter-spacing: 0.48px;
 `;
 
-export const LocationText = styled('p')`
+export const ContainerPrice = styled('div')`
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  height: 70px;
+  flex-shrink: 0;
+  border-radius: 0px 18px 0px 0px;
+  background: rgba(0, 0, 0, 0.60);
+`;
+
+export const ContainerPriceInterior = styled('div')`
   margin: 0;
   display: flex;
-  justify-content: left;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+`;
+
+export const LocationContainer = styled('div')`
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const LocationTextTop = styled('p')`
+  margin: 0 0 0 5px;
+  text-align: right;
+  color: #FFF;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.60);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.48px;
+`;
+
+export const LocationTextBot = styled('p')`
+  margin: 0;
   flex-shrink: 0;
   color: #FFF;
   font-family: Poppins;
@@ -95,12 +109,12 @@ export const LocationText = styled('p')`
   letter-spacing: 0.36px;
 `;
 
-export const HeartIcon = styled(FavoriteBorderIcon)`
+export const LocationIcon = styled(LocationOnIcon)`
   margin: 0;
   color: white;
 `;
 
-export const LocationIcon = styled(LocationOnIcon)`
+export const HeartIcon = styled(FavoriteBorderIcon)`
   margin: 0;
   color: white;
 `;
