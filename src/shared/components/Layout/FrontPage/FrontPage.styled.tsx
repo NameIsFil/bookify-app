@@ -1,4 +1,6 @@
 import {styled} from "@mui/material/styles";
+import {SearchField} from "../SearchField";
+
 
 export const TopFrontPage = styled('div')`
   display: flex;
@@ -11,6 +13,35 @@ export const TopFrontPage = styled('div')`
   background-repeat: no-repeat;
   background-position: 8% 100%;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.08);
+  @media only screen and (max-width: 576px) {
+    background-size: 100%;
+  }
+  \`;
+  //&:hover {
+  //  width: 380px;
+  //  outline: purple;
+  //  border:purple;
+  //}
+`;
+
+export const SearchBar = styled('div')`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 80px;
+  flex-flow: row wrap;
+  @media only screen and (max-width: 1580px) {
+    
+  }
+  
+  @media only screen and (max-width: 576px) {
+    justify-content: center;
+  }
+  \`;
+`;
+
+export const SearchFieldInput = styled(SearchField)`
+   margin-top: 400px;
 `;
 
 export const HeadText = styled('div')`
@@ -34,13 +65,6 @@ export const QuoteText = styled('div')`
   margin-bottom: 44px;
 `;
 
-export const SearchBar = styled('div')`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 80px;
-`;
-
 export const TopPart = styled('div')`
   display: flex;
   justify-content: flex-end;
@@ -48,6 +72,9 @@ export const TopPart = styled('div')`
   height: 300px;
   width: 100%;
   padding: 0px 160px;
+  @media only screen and (max-width: 576px) {
+    justify-content: center;
+    padding: 0 100px;
 `;
 
 export const BottomPart = styled('div')`
@@ -57,4 +84,7 @@ export const BottomPart = styled('div')`
   width: 100%;
   height: 500px;
   padding: 0px 160px;
+  @media only screen and (max-width: 1580px) {
+    padding: 0 100px;
+  }
 `;

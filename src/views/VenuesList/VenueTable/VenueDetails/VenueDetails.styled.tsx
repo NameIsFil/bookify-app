@@ -8,6 +8,13 @@ import LocationCityIcon from '@mui/icons-material/LocationCity';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 
+
+
+export const FullPage = styled('div')`
+  width: 100%;
+  marign: 0px;
+`;
+
 export const BackIcon = styled(ArrowBackIosIcon)`
   width: 20px;
   color: rgba(0, 0, 0, 0.75);

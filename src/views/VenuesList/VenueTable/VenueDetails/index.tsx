@@ -29,7 +29,8 @@ import {
     CheckmarkIcon,
     MainText,
     ContentDivider,
-    FeatureBedIcon, ClockIcon, CityIcon, PhoneIcon, MailIcon
+    FeatureBedIcon, ClockIcon, CityIcon, PhoneIcon, MailIcon,
+    FullPage
 } from "./VenueDetails.styled.tsx";
 import BasicDateCalendar from "./BookingCalendar";
 
@@ -75,7 +76,7 @@ export function VenueDetails() {
     }
 
     return (
-        <div>
+        <FullPage>
             <FrontPage />
             <BottomPage>
                 <LeftSide>
@@ -161,6 +162,6 @@ export function VenueDetails() {
                     </FeaturesList>
                 </RightSide>
             </BottomPage>
-        </div>
+        </FullPage>
     )
 }

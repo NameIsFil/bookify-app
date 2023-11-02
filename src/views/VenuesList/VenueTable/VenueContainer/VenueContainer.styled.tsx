@@ -3,6 +3,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import StarIcon from '@mui/icons-material/Star';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Link } from "react-router-dom";
 
 type InputProps = {
     background: number,
@@ -16,6 +17,10 @@ export const StyledVenueContainer = styled('div')<InputProps>(({ background }) =
    width: 282px;
    background-image: url("https://picsum.photos/id/${background}/282/193"); 
 `)
+
+export const LinkItem = styled(Link)`
+  text-decoration: none;
+`;
 
 export const ContainerIcon = styled('div')`
   display: flex;

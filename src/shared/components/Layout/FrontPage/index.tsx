@@ -1,11 +1,11 @@
-import {SearchField} from "../SearchField";
 import {SearchButton} from "../SearchButton";
 import {
     BottomPart,
     HeadText, QuoteText,
     SearchBar,
     TopFrontPage,
-    TopPart
+    TopPart,
+    SearchFieldInput,
 } from "./FrontPage.styled.tsx";
 
 
@@ -19,11 +19,11 @@ export const FrontPage = () => {
             </TopPart>
             <BottomPart>
                 <SearchBar>
-                    <SearchField name={"location"}/>
-                    <SearchField name={"venue"}/>
-                    <SearchField name={"pdsadlasdsa"}/>
-                    <SearchField name={"location"}/>
-                    <SearchField name={"location"}/>
+                    <SearchFieldInput name={"location"}/>
+                    <SearchFieldInput name={"venue"}/>
+                    <SearchFieldInput name={"pdsadlasdsa"}/>
+                    <SearchFieldInput name={"location"}/>
+                    <SearchFieldInput name={"location"}/>
                 </SearchBar>
                 <QuoteText>
                     I don’t want to be that specific

@@ -15,11 +15,8 @@ import {
     RatingSegment,
     LocationContainer,
     LocationIcon, LocationTextBot, LocationTextTop,
+    LinkItem,
 } from "./VenueContainer.styled.tsx";
-import { Link } from "react-router-dom";
-import { grey } from "@mui/material/colors";
-import AddIcon from '@mui/icons-material/Add';
-
 
 type VenueContainerProps = {
     venue: Venue,
@@ -34,38 +31,37 @@ export const VenueContainer: FunctionComponent<VenueContainerProps> = (props) =>
 
     return (
         <div>
-            <StyledVenueContainer background={props.venue.albumId} >
-                <TopBox>
-                    <ContainerIcon>
-                        <HeartIcon />
-                    </ContainerIcon>
-                    <ContainerTitle>
-                        <ContainerText>{props.venue.name}</ContainerText>
-                    </ContainerTitle>
-                </TopBox>
-                <ContainerPrice>
-                    <ContainerPriceInterior>
-                        <LocationTextTop>{props.venue.pricePerNightInEUR}zł / doba</LocationTextTop>
-                        <LocationContainer>
-                            <LocationIcon />
-                            <LocationTextBot> {props.venue.location.city}</LocationTextBot>
-                        </LocationContainer>
-                    </ContainerPriceInterior>
-                </ContainerPrice>
-            </StyledVenueContainer>
-            <RatingBar>
-                <RatingSegment>
-                    <BigStarIcon />
-                    <RatingText>rating  {props.venue.rating}</RatingText>
-                </RatingSegment>
-                <RatingSegment>
-                    <PeopleIcon />
-                    <RatingText>capacity  {props.venue.capacity}</RatingText>
-                </RatingSegment>
-                <Link to={`/details/${props.venue.id}`}>
-                    <AddIcon sx={{ color: grey[100] }} />
-                </Link>
-            </RatingBar>
+            <LinkItem to={`/details/${props.venue.id}`}>
+                <StyledVenueContainer background={props.venue.albumId} >
+                    <TopBox>
+                        <ContainerIcon>
+                            <HeartIcon />
+                        </ContainerIcon>
+                        <ContainerTitle>
+                            <ContainerText>{props.venue.name}</ContainerText>
+                        </ContainerTitle>
+                    </TopBox>
+                    <ContainerPrice>
+                        <ContainerPriceInterior>
+                            <LocationTextTop>{props.venue.pricePerNightInEUR}zł / doba</LocationTextTop>
+                            <LocationContainer>
+                                <LocationIcon />
+                                <LocationTextBot> {props.venue.location.city}</LocationTextBot>
+                            </LocationContainer>
+                        </ContainerPriceInterior>
+                    </ContainerPrice>
+                </StyledVenueContainer>
+                <RatingBar>
+                    <RatingSegment>
+                        <BigStarIcon />
+                        <RatingText>rating  {props.venue.rating}</RatingText>
+                    </RatingSegment>
+                    <RatingSegment>
+                        <PeopleIcon />
+                        <RatingText>capacity  {props.venue.capacity}</RatingText>
+                    </RatingSegment>
+                </RatingBar>
+            </LinkItem>
         </div>
     )
 }
