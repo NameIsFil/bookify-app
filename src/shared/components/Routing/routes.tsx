@@ -2,26 +2,35 @@ import { Login } from '../../../views/Login';
 import { RoutesEnum } from '../../types/Routes.enum';
 import { Route } from '../../types/Route';
 import { Dashboard } from '../../../views/Dashboard';
-import { Home } from '@mui/icons-material';
+import { VenuesList } from "../../../views/VenuesList";
+import { VenueDetails } from "../../../views/VenuesList/VenueTable/VenueDetails";
 
 export const routes: Array<Route> = [
   {
     path: RoutesEnum.LogIn,
     Component: <Login />,
     isPublic: true,
-    Icon: null,
   },
   {
     path: RoutesEnum.Fallback,
-    Component: <Login />,
+    Component: <VenuesList />,
     isPublic: true,
-    Icon: null,
   },
   {
     path: RoutesEnum.Dashboard,
     Component: <Dashboard />,
     name: 'dashboard',
     isPublic: false,
-    Icon: () => <Home />,
+  },
+  {
+    path: RoutesEnum.VenuesList,
+    Component: <VenuesList />,
+    name: 'venues-list',
+    isPublic: true,
+  },
+  {
+    path: RoutesEnum.Details,
+    Component: <VenueDetails />,
+    isPublic: false,
   },
 ];
